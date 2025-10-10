@@ -2,10 +2,11 @@ import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import CategoryBar from "@/components/CategoryBar";
+import Footer from "@/components/Footer";
+import HelmetCustomizer3D from "@/components/HelmetCustomizer3D";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
 import { toast } from "sonner";
 import helmetWhite from "@/assets/helmet-white.jpg";
 import helmetYellow from "@/assets/helmet-yellow.jpg";
@@ -26,6 +27,13 @@ const colors = [
   { name: "Blue", value: "blue", image: helmetBlue },
 ];
 
+const colorMap: Record<string, string> = {
+  [helmetWhite]: "white",
+  [helmetYellow]: "yellow",
+  [helmetRed]: "red",
+  [helmetBlue]: "blue",
+};
+
 const Customize = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -45,15 +53,9 @@ const Customize = () => {
       
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Product Preview */}
+          {/* 3D Product Preview */}
           <div className="animate-scale-in">
-            <Card className="p-12 bg-secondary">
-              <img
-                src={selectedColor}
-                alt="Selected helmet"
-                className="w-full h-full object-contain"
-              />
-            </Card>
+            <HelmetCustomizer3D selectedColor={colorMap[selectedColor]} />
           </div>
 
           {/* Customization Options */}
@@ -140,6 +142,8 @@ const Customize = () => {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

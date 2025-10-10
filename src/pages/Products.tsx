@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import CategoryBar from "@/components/CategoryBar";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import helmetWhite from "@/assets/helmet-white.jpg";
 import helmetYellow from "@/assets/helmet-yellow.jpg";
@@ -84,6 +85,8 @@ const Products = () => {
           ))}
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

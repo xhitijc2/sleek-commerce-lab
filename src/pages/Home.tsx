@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import CategoryBar from "@/components/CategoryBar";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import heroBanner from "@/assets/hero-banner.jpg";
 import stationeryImg from "@/assets/category-stationery.jpg";
@@ -86,6 +87,8 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
