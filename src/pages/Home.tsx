@@ -13,13 +13,13 @@ const categories = [
     title: "Premium Stationery",
     description: "Professional writing instruments and supplies",
     image: stationeryImg,
-    link: "/category/stationery",
+    link: "/stationery",
   },
   {
     title: "Corporate Fashion",
     description: "Business attire for the modern professional",
     image: fashionImg,
-    link: "/category/fashion",
+    link: "/tshirts",
   },
   {
     title: "Safety Helmets",
