@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 const categories = [
-  { name: "Stationery", path: "/category/stationery" },
-  { name: "Fashion", path: "/category/fashion" },
+  { name: "Stationery", path: "/stationery" },
+  { name: "Fashion", path: "/tshirts" },
   { name: "Helmets", path: "/products" },
   { name: "Electronics", path: "/category/electronics" },
   { name: "Office Supplies", path: "/category/office" },
