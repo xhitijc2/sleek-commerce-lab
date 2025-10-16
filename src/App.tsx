@@ -22,7 +22,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/sleek-commerce-lab">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
